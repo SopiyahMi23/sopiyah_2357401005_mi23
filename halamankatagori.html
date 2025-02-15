@@ -1,0 +1,119 @@
+<!-- 2357401005 Sopiyah -->
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Kategori</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #3A7D44;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .sidebar {
+            width: 250px;
+            background: #638C6D;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+        }
+        .sidebar h2 {
+            text-align: center;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .sidebar ul li a:hover, .sidebar ul li a.active {
+            background: #FF5F00;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            background: #1abc9c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .btn:hover {
+            background: #16a085;
+        }
+        .btn-secondary {
+            background: #FF5F00;
+        }
+        .btn-secondary:hover {
+            background: #FF5F00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="admin.html">Beranda</a></li>
+                <li><a href="halamanproduk.html"></a>Produk</a></li>
+                <li><a href="kategori.html" class="active">Kategori</a></li>
+                <li><a href="#">User</a></li>
+                <li><a href="index.html">Keluar</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <h1>Tambah Kategori</h1>
+            <div class="form-group">
+                <label for="namaKategori">Nama Kategori:</label>
+                <input type="text" id="namaKategori" placeholder="Masukkan nama kategori">
+            </div>
+            <button class="btn-secondary btn" onclick="kembali()">Kembali</button>
+            <button class="btn" onclick="simpanKategori()">Simpan Kategori</button>
+        </main>
+    </div>
+    <script>
+        function kembali() {
+            window.location.href = "kategori.html";
+        }
+        function simpanKategori() {
+            alert("Kategori berhasil disimpan!");
+            window.location.href = "halaman_kategori.html";
+        }
+    </script>
+</body>
+</html>

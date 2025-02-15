@@ -1,0 +1,145 @@
+<!-- 2357401005 Sopiyah -->
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Kategori</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #3A7D44 ;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .sidebar {
+            width: 250px;
+            background:#638C6D;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+        }
+        .sidebar h2 {
+            text-align: center;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .sidebar ul li a:hover, .sidebar ul li a.active {
+            background: #FF5F00;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            border-radius: 10px;
+        }
+        .btn {
+            background: #FF5F00;
+            color:#F3F7EC;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #F3CA52;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #006989;
+            color: white;
+        }
+        a {
+            color: hsl(0, 100%, 50%);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="admin.html">Beranda</a></li>
+                <li><a href="halamanproduk.html">Produk</a></li>
+                <li><a href="kategori.html" class="active">Kategori</a></li>
+                <li><a href="#">User</a></li>
+                <li><a href="admin.html">Keluar</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <h1>Kategori</h1>
+            <button class="btn" onclick="tambahKategori()">Tambah Kategori</button>
+            <table>
+                <tr>
+                    <th>Kategori</th>
+                    <th>Aksi</th>
+                </tr> 
+                <tr>
+                    <td>Aksesoris</td>
+                    <td><a href="#" onclick="hapusKategori()">Hapus</a></td>
+                </tr>
+                <tr>
+                    <td>Oli</td>
+                    <td><a href="#" onclick="hapusKategori()">Hapus</a></td>
+                </tr>
+                <tr>
+                    <td>Sparepart</td>
+                    <td><a href="#" onclick="hapusKategori()">Hapus</a></td>
+                </tr>
+                <tr>
+                    <td>Helm</td>
+                    <td><a href="#" onclick="hapusKategori()">Hapus</a></td>
+                </tr>
+                <tr>
+                    <td>Jaket</td>
+                    <td><a href="#" onclick="hapusKategori()">Hapus</a></td>
+                </tr>
+            </table>
+        </main>
+    </div>
+    <script>
+        function tambahKategori() {
+            window.location.href ="halamankatagori.html";                 
+        }
+        function hapusKategori() {
+            alert("Berhasil menghapus kategori");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!-- 2357401005 Sopiyah -->
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Produk</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #3A7D44;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .sidebar {
+            width: 250px;
+            background: #638C6D;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+        }
+        .sidebar h2 {
+            text-align: center;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .sidebar ul li a:hover, .sidebar ul li a.active {
+            background: #FF5F00;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            border-radius: 10px;
+        }
+        .btn {
+            background: #FF5F00;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .btn:hover {
+            background: #638C6D;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #006989;
+            color: white;
+        }
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+        .actions button {
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .edit {
+            background: #f39c12;
+            color: white;
+        }
+        .delete {
+            background: #e74c3c;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="admin.html">Beranda</a></li>
+                <li><a href="#" class="active">Produk</a></li>
+                <li><a href="kategori.html">Kategori</a></li>
+                <li><a href="#">User</a></li>
+                <li><a href="index.html">Keluar</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <h1>Produk</h1>
+            <button class="btn" onclick="tambahProduk()">Tambah Produk</button>
+            <table>
+                <tr>
+                    <th>Kode Produk</th>
+                    <th>Nama Produk</th>
+                    <th>Kategori</th>
+                    <th>Aksi</th>
+                </tr>
+                <tr>
+                    <td>P0001</td>
+                    <td>Helm</td>
+                    <td>Aksesoris</td>
+                    <td class="actions">
+                        <button class="edit">✏️</button>
+                        <button class="delete" onclick="hapusProduk()">❌</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>P0002</td>
+                    <td>Sarung Tangan</td>
+                    <td>Aksesoris</td>
+                    <td class="actions">
+                        <button class="edit">✏️</button>
+                        <button class="delete" onclick="hapusProduk()">❌</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>P0003</td>
+                    <td>Oli Matic</td>
+                    <td>Oli</td>
+                    <td class="actions">
+                        <button class="edit">✏️</button>
+                        <button class="delete" onclick="hapusProduk()">❌</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </main>
+    </div>
+    <script>
+        function tambahProduk() {
+            window.location.href = "tambahproduk.html";
+        }
+        function hapusProduk() {
+            alert("Berhasil menghapus produk");
+        }
+    </script>
+</body>
+</html>
